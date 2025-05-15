@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="shortcut icon" href="/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <meta name="apple-mobile-web-app-title" content="EvryOne" />
+  <link rel="manifest" href="/site.webmanifest" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Evryone - Web Radio</title>
+  
+  <!-- Frameworks and libraries -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Main Landing Content -->
+  <section class="hero is-fullheight">
+    <!-- Background elements -->
+    <div class="background-effects">
+      <!-- Particles -->
+      <div class="particles">
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+      </div>
+      
+      <!-- Light effects -->
+      <div class="spotlight"></div>
+      <div class="astra-highlight"></div>
+      <div class="astra-highlight"></div>
+      <div class="geometric-shape"></div>
+      <div class="geometric-shape"></div>
+      <div class="light-beam"></div>
+      <div class="light-beam"></div>
+      <div class="light-beam"></div>
+    </div>
+
+    <!-- Main content -->
+    <div class="hero-body full-width">
+      <div class="content-wrapper">
+        <!-- Radio logo -->
+        <div class="logo-container">
+          <div class="logo-rotation-container">
+            <img 
+              src="/evryone-logo.png" 
+              alt="evryone logo" 
+              class="logo-image" 
+              id="logo-image" 
+            >
+          </div>
+        </div>
+        
+        <!-- Radio information -->
+        <h1 class="title-text">Evryone</h1>
+        <div class="frequency">FM 95.4</div>
+        
+        <p class="description">
+          La radio étudiante créée en 2002 des écoles Télécom SudParis 
+          et l'Institut Mines-Télécom Business School.
+        </p>
+        
+        <!-- Call to action button -->
+        <div class="cta-container">
+          <button id="listenButton" class="listen-button">
+            <span class="icon">
+              <i class="fas fa-play"></i>
+            </span>
+            <span>ÉCOUTER EN DIRECT</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Fixed audio player bar -->
+  <div id="audio-player-bar" class="audio-player-bar">
+    <!-- Left section: Now playing info -->
+    <div class="player-left">
+      <div class="now-playing-info">
+        <div class="direct-badge">
+          <span class="dot"></span>
+          <span>EN DIRECT</span>
+        </div>
+        <p id="now-playing-details">Diffusion en continu...</p>
+      </div>
+    </div>
+    
+    <!-- Center section: Player controls -->
+    <div class="player-controls">
+      <button class="player-button" id="prevButton">
+        <i class="fas fa-step-backward"></i>
+      </button>
+      <button class="player-button" id="playPauseButton">
+        <i class="fas fa-play"></i>
+      </button>
+      <button class="player-button" id="nextButton">
+        <i class="fas fa-step-forward"></i>
+      </button>
+    </div>
+    
+    <!-- Right section: Volume and close -->
+    <div class="player-right">
+      <div class="volume-container">
+        <i class="fas fa-volume-up"></i>
+        <input 
+          id="volumeControl" 
+          type="range" 
+          min="0" 
+          max="1" 
+          step="0.01" 
+          value="1" 
+          class="volume-slider"
+        >
+      </div>
+      <button class="player-button" id="closeButton">
+        <i class="fas fa-times"></i>
+      </button>
+    </div>
+    
+    <!-- Audio element -->
+    <audio id="radioPlayer" src="http://localhost:3000/audio/main"></audio>
+  </div>
+  
+  <!-- Script will be injected by Vite -->
+  <script type="module" src="/src/main.ts"></script>
+</body>
+</html>
